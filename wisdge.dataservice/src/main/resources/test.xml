@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workset name="Sys">
+	<!-- 
+	<sql name="project.loadAll" dbType="MYSQL/SQLSERVER/ORACLE">
+		<![CDATA[
+		]]>
+	</sql>
+	 -->
+	<sql name="user.get" process="freemarker">
+		<![CDATA[
+SELECT * FROM T_USER WHERE USERNAME = ?
+WHERE 1=1
+	<#if status != null>AND STATUS = ${status}</#if>
+	<#if filter != null>AND FULLNAME LINK ${filter}</#if>
+		]]>
+	</sql>
+</workset>
